@@ -141,13 +141,11 @@ export default {
       text-align: center;
 
       &.v-card__text {
-        padding: 7px 0 0 0;
+        padding: 7px 0 9px 0;
       }
     }
 
     &__btn {
-      margin-top: 29px;
-
       &.v-btn {
         border-radius: 5px;
         text-transform: initial;

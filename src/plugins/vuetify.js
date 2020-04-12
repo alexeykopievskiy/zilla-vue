@@ -4,7 +4,7 @@ import 'vuetify/src/styles/main.sass';
  
 const options = {
   icons: {
-    iconfont: 'md',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+    iconfont: 'mdi',  // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
   },
   theme: {
     dark: false,

@@ -29,7 +29,9 @@
         <v-text-field
           class="swapzilla-input"
           background-color="#F0F0F0"
-          solo
+          outlined
+          height="50"
+          single-line
           label="Withdraw amount"
         ></v-text-field>
         <v-btn
@@ -102,6 +104,22 @@ export default {
     &.theme--light.v-input input {
       color: #3c484c;
       font-size: 14px;
+    }
+
+    &.v-text-field--outlined fieldset {
+      border: 1px solid rgb(240, 240, 240)
+    }
+
+    &.v-text-field--outlined.v-input--is-focused fieldset, .v-text-field--outlined.v-input--has-state fieldset {
+      border: 1px solid #54B2C8;
+    }
+
+    &.v-text-field--outlined > .v-input__control > .v-input__slot {
+      min-height: 50px;
+    }
+
+    &.v-text-field--outlined .v-label {
+      top: 15px;
     }
 
     &__container {

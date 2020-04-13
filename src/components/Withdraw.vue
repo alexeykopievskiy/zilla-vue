@@ -3,7 +3,7 @@
     <v-card class="swapzilla-card__item">
       <v-select
         class="swapzilla-select"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         :items="exchanges"
         filled
         height="50"
@@ -15,7 +15,7 @@
     <v-card class="swapzilla-card__item">
       <v-select
         class="swapzilla-select"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         :items="currencies"
         filled
         height="50"
@@ -28,7 +28,7 @@
       <v-card class="swapzilla-input__container">
         <v-text-field
           class="swapzilla-input"
-          background-color="#F0F0F0"
+          background-color="var(--v-border-base)"
           outlined
           height="50"
           single-line
@@ -36,7 +36,7 @@
         ></v-text-field>
         <v-btn
           @click="maxAmount()"
-          color="#C4C4C4"
+          color="var(--v-alpha-base)"
           width="47"
           height="32"
           class="swapzilla-btn"
@@ -92,7 +92,7 @@ export default {
       height: 19px;
       line-height: 19px;
       font-size: 14px;
-      color: #9aa2a8;
+      color: var(--v-label-base);
     }
 
     &.v-text-field.v-text-field--enclosed:not(.v-text-field--rounded)
@@ -112,7 +112,7 @@ export default {
 
     &.v-text-field--outlined.v-input--is-focused fieldset,
     .v-text-field--outlined.v-input--has-state fieldset {
-      border: 1px solid #54b2c8;
+      border: 1px solid var(--v-info-base);
     }
 
     &.v-text-field--outlined > .v-input__control > .v-input__slot {
@@ -146,7 +146,7 @@ export default {
         padding: 0;
         min-width: 47px;
         height: 32px;
-        color: #fff;
+        color: var(--v-white-base);
         font-size: 12px;
         letter-spacing: 0;
         font-weight: bold;

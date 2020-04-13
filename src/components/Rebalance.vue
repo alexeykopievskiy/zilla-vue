@@ -5,7 +5,7 @@
         <v-card-text class="swapzilla-select__label">From</v-card-text>
         <v-select
           class="swapzilla-select"
-          background-color="#F0F0F0"
+          background-color="var(--v-border-base)"
           :items="exchanges"
           filled
           height="50"
@@ -20,7 +20,7 @@
         <v-card-text class="swapzilla-select__label">To</v-card-text>
         <v-select
           class="swapzilla-select"
-          background-color="#F0F0F0"
+          background-color="var(--v-border-base)"
           :items="exchanges"
           filled
           height="50"
@@ -33,7 +33,7 @@
     <v-card class="swapzilla-card__item">
       <v-select
         class="swapzilla-select"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         :items="currencies"
         filled
         height="50"
@@ -45,7 +45,7 @@
     <v-card class="swapzilla-card__item">
       <v-text-field
         class="swapzilla-input"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         outlined
         height="50"
         single-line
@@ -60,7 +60,7 @@
         <v-btn
           v-for="item in btns"
           :key="item"
-          color="#C4C4C4"
+          color="var(--v-alpha-base)"
           width="47"
           height="32"
           class="swapzilla-btn"
@@ -98,7 +98,7 @@ export default {
   &__item {
     &--content.v-card {
       box-shadow: 0px 6px 6px rgba(60, 72, 76, 0.06) !important;
-      border: 1px solid #f0f0f0;
+      border: 1px solid var(--v-border-base);
       padding: 20px;
       margin-top: -19px;
 
@@ -115,7 +115,7 @@ export default {
 
 .swapzilla-badge {
   &.theme--light.v-chip {
-    color: #2A6591;
+    color: var(--v-primary-base);
   }
 
   &.v-chip.v-size--default {

@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <v-row justify="center">
-        <v-dialog persistent max-width="790">
+        <v-dialog v-model="dialog" persistent max-width="790">
           <template v-slot:activator="{ on }">
             <v-btn justify="center" color="primary" dark v-on="on">Open Dialog</v-btn>
           </template>
@@ -11,7 +11,9 @@
               <v-tabs-slider></v-tabs-slider>
 
               <v-tab v-for="(tab, index) in tabs" :key="tab" :href="`#tab-${index}`">{{tab}}</v-tab>
-
+              <v-btn class="swapzilla-tabs__close" @click="dialog=false" icon right color="#9AA2A8">
+                <v-icon size="32">mdi-close</v-icon>
+              </v-btn>
               <v-tab-item class="swapzilla-tabs__item" :value="'tab-0'">
                 <Deposit />
               </v-tab-item>
@@ -44,16 +46,8 @@ export default {
   data() {
     return {
       tab: null,
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      icons: false,
-      centered: false,
-      grow: false,
-      vertical: false,
-      prevIcon: false,
-      nextIcon: false,
-      right: false,
-      tabs: ["Deposit", "Withdraw", "Rebalance"]
+      tabs: ["Deposit", "Withdraw", "Rebalance"],
+      dialog: false
     };
   }
 };
@@ -65,18 +59,26 @@ export default {
 .swapzilla {
   &-tabs {
     font-family: "Open Sans", sans-serif;
+    position: relative;
+
+    &__close {
+      position: absolute;
+      right: 26px;
+      top: 26px;
+    }
 
     &.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) {
-      color: #9aa2a8;
+      color: var(--v-label-base);
     }
 
     .v-tabs-slider {
-      background-color: #3c484c;
+      background-color: var(--v-dark-base);
     }
 
     .v-tabs-bar {
       &__content {
-        padding: 33px 40px;
+        padding: 33px 40px 14px;
+        height: 80px;
       }
     }
 
@@ -85,18 +87,19 @@ export default {
       font-size: 20px;
       line-height: 27px;
       letter-spacing: 0;
-      color: #9aa2a8;
+      color: var(--v-label-base);
       padding: 0;
       font-weight: 400;
       min-width: auto;
       margin-right: 40px;
+      height: 30px;
 
       &.v-tab {
-        color: #3c484c;
+        color: var(--v-dark-base);
       }
 
       &--active {
-        color: #3c484c;
+        color: var(--v-dark-base);
       }
 
       &:last-child {

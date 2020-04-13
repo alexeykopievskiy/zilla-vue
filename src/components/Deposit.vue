@@ -3,7 +3,7 @@
     <v-card class="swapzilla-card__item">
       <v-select
         class="swapzilla-select"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         :items="exchanges"
         filled
         height="50"
@@ -15,7 +15,7 @@
     <v-card class="swapzilla-card__item">
       <v-select
         class="swapzilla-select"
-        background-color="#F0F0F0"
+        background-color="var(--v-border-base)"
         :items="currencies"
         filled
         height="50"
@@ -92,7 +92,7 @@ export default {
 
   &.theme--light.v-select .v-select__selection--comma {
     font-size: 14px;
-    color: #3c484c;
+    color: var(--v-dark-base);
   }
 
   &.v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--single-line
@@ -102,14 +102,14 @@ export default {
 
   .v-icon,
   .v-icon.primary--text {
-    color: #9aa2a8 !important;
+    color: var(--v-label-base) !important;
   }
 
   &.v-input .v-label {
     height: 19px;
     line-height: 19px;
     font-size: 14px;
-    color: #9aa2a8;
+    color: var(--v-label-base);
   }
 
   &.v-input--dense > .v-input__control > .v-input__slot {

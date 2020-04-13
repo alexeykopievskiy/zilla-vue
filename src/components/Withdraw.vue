@@ -39,7 +39,7 @@
           color="#C4C4C4"
           width="47"
           height="32"
-          class="swapzilla-input__btn"
+          class="swapzilla-btn"
           tile
         >Max</v-btn>
       </v-card>
@@ -107,11 +107,12 @@ export default {
     }
 
     &.v-text-field--outlined fieldset {
-      border: 1px solid rgb(240, 240, 240)
+      border: 1px solid rgb(240, 240, 240);
     }
 
-    &.v-text-field--outlined.v-input--is-focused fieldset, .v-text-field--outlined.v-input--has-state fieldset {
-      border: 1px solid #54B2C8;
+    &.v-text-field--outlined.v-input--is-focused fieldset,
+    .v-text-field--outlined.v-input--has-state fieldset {
+      border: 1px solid #54b2c8;
     }
 
     &.v-text-field--outlined > .v-input__control > .v-input__slot {
@@ -124,13 +125,16 @@ export default {
 
     &__container {
       position: relative;
+
+      .swapzilla-btn {
+        position: absolute;
+        right: 9px;
+        top: 9px;
+      }
     }
+  }
 
-    &__btn {
-      position: absolute;
-      right: 9px;
-      top: 9px;
-
+  &-btn {
       &.v-btn:not(.v-btn--round).v-size--default {
         min-width: 47px;
         padding: 0;
@@ -150,6 +154,5 @@ export default {
         border-radius: 5px;
       }
     }
-  }
 }
 </style>

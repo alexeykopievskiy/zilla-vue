@@ -66,7 +66,6 @@ export default {
 
 <style lang="scss">
 .swapzilla-select {
-  border-radius: 5px;
 
   &.v-text-field--filled.v-input--dense.v-text-field--single-line .v-label,
   .v-text-field--full-width.v-input--dense.v-text-field--single-line .v-label {
@@ -132,6 +131,12 @@ export default {
     &__item {
       margin-bottom: 20px;
 
+      &.v-card {
+        *:last-child:not(.v-btn):not(.v-chip) {
+          border-radius: 5px;
+        }
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -159,12 +164,4 @@ export default {
     }
   }
 }
-
-/*.v-card > {
-  *.swapzilla-select {
-    &.v-input.v-text-field {
-      border-radius: 5px;
-    }
-  }
-}*/
 </style>
